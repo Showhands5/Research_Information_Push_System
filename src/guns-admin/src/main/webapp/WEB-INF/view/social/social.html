@@ -1,0 +1,89 @@
+@layout("/common/_container.html"){
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="ibox float-e-margins">
+                <div class="ibox-title">
+                    <h5>社交账号查看（如果是外网账号需要翻墙并且耐心等待~，</h5>
+                    <h5>由于社交网站普遍采取反机器登录的措施，故这一部分功能还不完善</h5>
+                </div>
+                <div class="ibox-content">
+                    <div class="row row-lg">
+                        <div class="col-sm-12">      
+                                        
+                            <div class="row">
+                                <div class="col-sm-3">
+                                    <#NameCon id="condition" name="账号名"/>
+                                </div>
+                                
+                                <div class="col-sm-3">
+                                    <#button name="搜索" icon="fa-search" clickFun="Paper.search()"/>
+                                </div>
+                            </div>
+                            <!-- 
+                            <div class="hidden-xs" id="SocialTableToolbar" role="group">
+                                @if(shiro.hasPermission("/paper/paper/add")){
+                                    <#button name="添加" icon="fa-plus" clickFun="Paper.openAddPaper()"/>
+                                @}
+                                @if(shiro.hasPermission("/paper/paper/update")){
+                                    <#button name="修改" icon="fa-edit" clickFun="Paper.openPaperDetail()" space="true"/>
+                                @}
+                                @if(shiro.hasPermission("/paper/paper/delete")){
+                                    <#button name="删除" icon="fa-minus" clickFun="Paper.delete()" space="true"/>
+                                @}
+                            </div>
+                            
+                            <#table id="SocialTable"/>
+                            <div class="fb-post" 
+                                data-href="https://www.facebook.com/20531316728/posts/10154009990506729/"
+                                data-width="500">
+                            </div>
+                            -->
+                            
+                        
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">AI For Everyone is now available on 
+                                    <a href="https://twitter.com/coursera?ref_src=twsrc%5Etfw">Coursera</a>
+                                    ! This course will help non-engineers and engineers work together to leverage AI capabilities and build an AI strategy. 
+                                    If you want your company to embrace AI, this is the course to get your CEO to take! 
+                                    <a href="https://t.co/bzpf1ed8DL">https://t.co/bzpf1ed8DL</a> 
+                                    <a href="https://t.co/zfaclVjnbS">pic.twitter.com/zfaclVjnbS</a>
+                                </p>&mdash; Andrew Ng (AndrewYNg) 
+                                <a href="https://twitter.com/AndrewYNg/status/1101150955389706243?ref_src=twsrc%5Etfw">February 28, 2019</a>
+                            </blockquote> 
+                            <blockquote class="twitter-tweet">
+                                <p lang="en" dir="ltr">“Fun for families, serious for science.” Helping my brilliant psychology colleague 
+                                    <a href="https://twitter.com/hyogweon?ref_src=twsrc%5Etfw">hyogweon</a> to promote her new research project!  
+                                    <a href="https://t.co/poEHO5zrXu">https://t.co/poEHO5zrXu</a></p>&mdash; Fei-Fei Li (drfeifei) 
+                                    <a href="https://twitter.com/drfeifei/status/1256328312994975744?ref_src=twsrc%5Etfw">May 1, 2020</a>
+                            </blockquote>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="${ctxPath}/static/modular/social/social.js"></script>
+    <!--<script async defer src="${ctxPath}/static/modular/social/facebook.js"></script>
+     -->
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+    <script async defer src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+    @}
+    <!-- 
+                        <div class="fb-post" 
+                            data-href="https://www.facebook.com/PKodmad/"
+                            data-width="500"></div>
+                        </div>
+                         
+                        <blockquote class="twitter-tweet">
+                            <p lang="en" dir="ltr">AI For Everyone is now available on 
+                                <a href="https://twitter.com/coursera?ref_src=twsrc%5Etfw">Coursera</a>
+                                ! This course will help non-engineers and engineers work together to leverage AI capabilities and build an AI strategy. 
+                                If you want your company to embrace AI, this is the course to get your CEO to take! 
+                                <a href="https://t.co/bzpf1ed8DL">https://t.co/bzpf1ed8DL</a> 
+                                <a href="https://t.co/zfaclVjnbS">pic.twitter.com/zfaclVjnbS</a>
+                            </p>&mdash; Andrew Ng (AndrewYNg) 
+                            <a href="https://twitter.com/AndrewYNg/status/1101150955389706243?ref_src=twsrc%5Etfw">February 28, 2019</a>
+                        </blockquote> 
+                        -->

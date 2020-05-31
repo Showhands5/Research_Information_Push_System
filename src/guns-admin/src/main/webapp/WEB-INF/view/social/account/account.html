@@ -1,0 +1,51 @@
+@layout("/common/_container.html"){
+<div class="row">
+    <div class="col-sm-12">
+        <div class="ibox float-e-margins">
+            <div class="ibox-title">
+                <h5>社交账号设置</h5>
+            </div>
+            <div class="ibox-content">
+                <div class="row row-lg">
+                    <div class="col-sm-12">      
+                                    
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <#NameCon id="condition" name="账号名"/>
+                            </div>
+                            
+                            <div class="col-sm-3">
+                                <#button name="搜索" icon="fa-search" clickFun="Account.search()"/>
+                            </div>
+                        </div>
+                        
+                        <div class="hidden-xs" id="AccountTableToolbar" role="group">
+                            @if(shiro.hasPermission("/social/account/add")){
+                                <#button name="添加" icon="fa-plus" clickFun="Account.openAddAccount()"/>
+                            @}
+                            @if(shiro.hasPermission("/social/account/update")){
+                                <#button name="修改" icon="fa-edit" clickFun="Account.openAccountDetail()" space="true"/>
+                            @}
+                            @if(shiro.hasPermission("/social/account/delete")){
+                                <#button name="删除" icon="fa-minus" clickFun="Account.delete()" space="true"/>
+                            @}
+                        
+                        </div>
+                        <#table id="AccountTable"/>
+                        <!-- 
+                        <div class="fb-post" 
+                            data-href="https://www.facebook.com/20531316728/posts/10154009990506729/"
+                            data-width="500"></div>
+                        </div>
+                        -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="${ctxPath}/static/modular/social/account/account.js"></script>
+<!--<script async defer src="${ctxPath}/static/modular/social/facebook.js"></script>
+    有这个就会变慢
+<script async defer src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.2"></script>
+-->
+@}
